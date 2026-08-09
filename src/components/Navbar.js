@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
@@ -7,6 +8,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
+    { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Skill", href: "#skill" },
     { name: "Project", href: "#project" },
@@ -60,13 +62,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <div className="flex-shrink-0 font-bold text-2xl tracking-tighter">
-            <a 
-              href="#" 
+            <Link 
+              href="/"
               onClick={(e) => handleClick(e, "#")}
               className="text-gray-900 dark:text-white transition-opacity hover:opacity-80"
             >
-              Portfolio.
-            </a>
+              Niloy
+            </Link>
           </div>
 
           {/* Desktop Menu */}
