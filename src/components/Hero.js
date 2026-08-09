@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import Typewriter from "typewriter-effect";
 
 const Hero = () => {
@@ -49,7 +50,7 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-              <a 
+              <Link 
                 href="#project" 
                 className="w-full sm:w-auto px-8 py-4 bg-gray-900 text-white dark:bg-white dark:text-gray-900 rounded-full font-semibold hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-white/20 transition-all duration-300 flex items-center justify-center gap-2"
               >
@@ -57,13 +58,17 @@ const Hero = () => {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                 </svg>
-              </a>
-              <a 
+              </Link>
+              {/* <Link
                 href="#contact" 
                 className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white rounded-full font-semibold hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all duration-300"
               >
                 Contact Me
-              </a>
+              </Link> */}
+
+                
+
+              
             </div>
           </div>
 

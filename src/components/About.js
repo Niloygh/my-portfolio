@@ -24,7 +24,7 @@ const About = () => {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-md aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white dark:border-zinc-800">
               <Image
-                src="/my-photo.png"
+                src="/my-photo-two.png"
                 alt="Niloy - Web Developer"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"
@@ -55,14 +55,6 @@ const About = () => {
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-base md:text-lg">
               Whether working on custom web designs or optimizing performant web apps, I love learning new tools, solving problems, and delivering polished results.
             </p>
-
-            {/* resume */}
-            <Button
-             variant="secondary"
-             className="text-left text-md">
-              Download Resume
-            </Button>
-
 
 
 
