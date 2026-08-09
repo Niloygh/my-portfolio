@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import Typewriter from "typewriter-effect";
 
 const Hero = () => {
   return (
@@ -22,8 +25,23 @@ const Hero = () => {
               Niloy
             </h1>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-200">
-              Web Developer
+            {/* Dynamic Typewriter Text */}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-200 flex items-center justify-center lg:justify-start min-h-[3rem]">
+              <span className="text-blue-600 dark:text-blue-400">
+                <Typewriter
+                  options={{
+                    strings: [
+                      "Web Developer",
+                      "Frontend Developer",
+                      "mern stack developer"
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    deleteSpeed: 50,
+                    delay: 75,
+                  }}
+                />
+              </span>
             </h2>
 
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 font-light max-w-xl mx-auto lg:mx-0 leading-relaxed">
@@ -36,7 +54,9 @@ const Hero = () => {
                 className="w-full sm:w-auto px-8 py-4 bg-gray-900 text-white dark:bg-white dark:text-gray-900 rounded-full font-semibold hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-white/20 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 View Projects
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
               </a>
               <a 
                 href="#contact" 
@@ -57,7 +77,7 @@ const Hero = () => {
               {/* Image Container */}
               <div className="absolute inset-0 bg-white dark:bg-zinc-900 rounded-[2rem] lg:rounded-[3rem] overflow-hidden shadow-2xl border border-gray-100 dark:border-zinc-800 backdrop-blur-sm z-10 flex items-center justify-center">
                 <Image
-                  src="/developer_avatar.png"
+                  src="/my-photo.png"
                   alt="Developer Illustration"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
