@@ -6,6 +6,7 @@ import { Card, Button, Chip, Link } from "@heroui/react";
 // react-icons
 import { FiMail, FiMapPin, FiBriefcase, FiSend, FiGithub, FiLinkedin, FiTwitter, FiCheckCircle, FiUser } from "react-icons/fi";
 import { HiOutlineSparkles, HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
+import Social from "./Social";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -26,12 +27,38 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // API request simulation
-    await new Promise((resolve) => setTimeout(resolve, 1200));
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/niloyniloy843@gmail.com", {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: "New Portfolio Contact Form Submission"
+        })
+      });
 
-    setIsSubmitting(false);
-    setSubmitted(true);
-    setFormData({ name: "", email: "", subject: "", message: "" });
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        console.error("Form submission failed");
+        // Fallback behavior if needed
+        setSubmitted(true);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      // Fallback behavior if needed
+      setSubmitted(true);
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -76,7 +103,7 @@ export default function ContactPage() {
                         color="foreground" 
                         className="font-medium hover:text-primary transition-colors text-sm sm:text-base"
                       >
-                        niloyniloy@gmail.com
+                        niloyniloy843@gmail.com
                       </p>
                     </div>
                   </div>
@@ -113,7 +140,7 @@ export default function ContactPage() {
           <Card className="border border-default-100 shadow-medium p-6">
             <div>
               <h2 className="text-base font-bold mb-4">Social Profiles</h2>
-              <div className="grid grid-cols-3 gap-2">
+              {/* <div className="grid grid-cols-3 gap-2">
                 <Button 
                   as={Link} 
                   href="https://github.com" 
@@ -148,7 +175,11 @@ export default function ContactPage() {
                 >
                   Twitter
                 </Button>
-              </div>
+              </div> */}
+
+                <Social />
+
+              
             </div>
           </Card>
         </aside>
