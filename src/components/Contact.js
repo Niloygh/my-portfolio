@@ -35,7 +35,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="max-w-6xl mx-auto px-4 py-12 sm:py-16 text-foreground">
+    <main id="contact" className="max-w-6xl mx-auto px-4 py-12 sm:py-16 text-foreground">
       {/* Header */}
       <header className="text-center mb-12 sm:mb-16 space-y-4">
         <Chip 
