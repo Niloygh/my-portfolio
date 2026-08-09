@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { FaCloudDownloadAlt } from "react-icons/fa";
 import Typewriter from "typewriter-effect";
 
 const Hero = () => {
@@ -59,12 +60,14 @@ const Hero = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                 </svg>
               </Link>
-              {/* <Link
-                href="#contact" 
-                className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white rounded-full font-semibold hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all duration-300"
+              <Link
+                href="/Niloy_Resume.pdf"
+                download={'Niloy_Resume.pdf'}
+                className="w-full flex justify-center items-center gap-2 sm:w-auto px-8 py-4 bg-transparent border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white rounded-full font-semibold hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all duration-300"
               >
-                Contact Me
-              </Link> */}
+                <span><FaCloudDownloadAlt size={23} /></span>
+                <span>Resume download</span>
+              </Link>
 
                 
 

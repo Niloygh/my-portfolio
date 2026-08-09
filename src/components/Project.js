@@ -10,7 +10,7 @@ const Projects = () => {
       description:
         "HealthCare is a responsive healthcare management platform that connects patients with qualified doctors and medical services. It provides doctor discovery, appointment booking, online consultation, specialization-based browsing, doctor profiles, and patient-focused healthcare information through a modern and intuitive interface.",
       image: "https://i.ibb.co.com/DHV4cfCD/Screenshot-2026-08-09-141351.png", 
-      tags: ["Next.js", "React", "Tailwind CSS", "JavaScript"],
+      tags: ["Html", "Tailwind CSS", "JavaScript", "Next.js", "heroUi", "react icon", "stripe", ],
       liveUrl: "https://healthcare-client-mu.vercel.app",
       githubUrl: "https://github.com/yourusername/project1",
     },
@@ -20,7 +20,7 @@ const Projects = () => {
       description:
         "Tutor Finder is a responsive online tutoring platform that connects students with suitable tutors. It provides tutor discovery, tutor profile management, session booking, booked-session tracking, authentication, and personalized learning features through a clean and user-friendly interface.",
       image: "https://i.ibb.co.com/TxHWsBjT/Screenshot-2026-08-09-141933.png",
-      tags: ["React", "Next.js", "Tailwind CSS"],
+      tags: [ "Html", "Tailwind CSS", "JavaScript", "Next.js", "heroUi", "react icon", "postcss", "swiper" ],
       liveUrl: "https://tutors-finder-fronted.vercel.app",
       githubUrl: "https://github.com/Niloygh/tutors-finder-fronted",
     },
@@ -30,9 +30,9 @@ const Projects = () => {
       description:
         "Sunglass is a responsive e-commerce platform for showcasing and selling stylish sunglasses. It features product browsing, promotional offers, user authentication, profile management, and a clean, modern shopping interface designed to provide a simple and engaging customer experience.",
       image: "https://i.ibb.co.com/GfkSD7Xd/Screenshot-2026-08-09-141646.png",
-      tags: ["HTML5", "CSS3", "JavaScript", "Tailwind CSS"],
+      tags: ["Html", "Tailwind CSS", "JavaScript", "Next.js", "heroUi", "react icon", "animateCss",],
       liveUrl: "https://assignment-8-puce.vercel.app",
-      githubUrl: "https://github.com/yourusername/project3",
+      githubUrl: "https://github.com/Niloygh/assignment-8",
     },
   ];
 
