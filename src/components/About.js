@@ -24,7 +24,7 @@ const About = () => {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-md aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white dark:border-zinc-800">
               <Image
-                src="/my-photo-two.png"
+                src="/my-photo-two.jpg"
                 alt="Niloy - Web Developer"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"
